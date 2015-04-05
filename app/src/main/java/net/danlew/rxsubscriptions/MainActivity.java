@@ -50,4 +50,10 @@ public class MainActivity extends ActionBarActivity {
     void lifecycleObservable() {
         startActivity(new Intent(this, LifecycleActivity.class));
     }
+
+    @OnClick(R.id.never_leaks)
+    void neverLeaks() {
+        startActivity(new Intent(this, NeverActivity.class));
+    }
+
 }

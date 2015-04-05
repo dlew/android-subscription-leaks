@@ -22,4 +22,7 @@
     <string name="lifecycle_observable">LifecycleObservable</string>
     <string name="explanation_lifecycle">This activity should always auto-unsubscribe due to
         LifecycleObservable.bindActivityLifecycle().</string>
+
+    <string name="never_leaks">Never Leaks</string>
+    <string name="explanation_never">This activity feels like it ought to leak, but it does not.</string>
 </resources>

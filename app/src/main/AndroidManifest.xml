@@ -28,6 +28,8 @@
 
         <activity android:name=".LifecycleActivity" />
 
+        <activity android:name=".NeverActivity" />
+
     </application>
 
 </manifest>
