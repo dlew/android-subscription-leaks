@@ -34,4 +34,14 @@ public class MainActivity extends ActionBarActivity {
     void tempLeakSubscriptionWithFix() {
         startActivity(TempLeakingActivity.createIntent(this, true));
     }
+
+    @OnClick(R.id.bind_activity_leak)
+    void bindActivityLeak() {
+        startActivity(BindActivity.createIntent(this, false));
+    }
+
+    @OnClick(R.id.bind_activity_no_leak)
+    void bindActivityNoLeak() {
+        startActivity(BindActivity.createIntent(this, true));
+    }
 }

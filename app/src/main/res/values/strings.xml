@@ -11,4 +11,11 @@
     <string name="temp_leaking_subscription">Leaking (Temporary)</string>
     <string name="temp_leaking_subscription_fixed">Leaking (Temporary but fixed)</string>
     <string name="explanation_leak_temp">This activity should leak when you go back, but eventually release.</string>
+
+    <string name="bind_activity_leak">BindActivity (with leak)</string>
+    <string name="bind_activity_no_leak">BindActivity (without leak)</string>
+    <string name="explanation_bind_leak">This activity should leak when you go back, even though it used
+        bindActivity.</string>
+    <string name="explanation_bind_no_leak">This activity should leak when you go back, even though it used
+        bindActivity.</string>
 </resources>

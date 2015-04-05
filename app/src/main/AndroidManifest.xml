@@ -24,6 +24,8 @@
 
         <activity android:name=".TempLeakingActivity" />
 
+        <activity android:name=".BindActivity" />
+
     </application>
 
 </manifest>
