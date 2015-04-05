@@ -26,5 +26,11 @@
             android:layout_height="wrap_content"
             android:text="@string/leaking_subscription" />
 
+        <Button
+            android:id="@+id/leaking_subscription_fixed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/leaking_subscription_fixed" />
+
     </LinearLayout>
 </ScrollView>

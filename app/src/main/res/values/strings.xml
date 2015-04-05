@@ -5,4 +5,5 @@
         tool, you\'ll see that sometimes the amount of memory goes up - the Activity leaked!</string>
     <string name="explanation_leak">This activity should leak when you go back.</string>
     <string name="leaking_subscription">Leaking Subscription</string>
+    <string name="leaking_subscription_fixed">Leaking Subscription (Fixed)</string>
 </resources>

@@ -1,6 +1,5 @@
 package net.danlew.rxsubscriptions;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import butterknife.ButterKnife;
@@ -18,6 +17,11 @@ public class MainActivity extends ActionBarActivity {
 
     @OnClick(R.id.leaking_subscription)
     void leakSubscription() {
-        startActivity(new Intent(this, LeakingActivity.class));
+        startActivity(LeakingActivity.createIntent(this, false));
+    }
+
+    @OnClick(R.id.leaking_subscription_fixed)
+    void leakSubscriptionWithFix() {
+        startActivity(LeakingActivity.createIntent(this, true));
     }
 }
