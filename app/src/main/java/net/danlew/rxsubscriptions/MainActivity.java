@@ -1,5 +1,6 @@
 package net.danlew.rxsubscriptions;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import butterknife.ButterKnife;
@@ -43,5 +44,10 @@ public class MainActivity extends ActionBarActivity {
     @OnClick(R.id.bind_activity_no_leak)
     void bindActivityNoLeak() {
         startActivity(BindActivity.createIntent(this, true));
+    }
+
+    @OnClick(R.id.lifecycle_observable)
+    void lifecycleObservable() {
+        startActivity(new Intent(this, LifecycleActivity.class));
     }
 }

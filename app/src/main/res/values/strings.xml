@@ -18,4 +18,8 @@
         bindActivity.</string>
     <string name="explanation_bind_no_leak">This activity should leak when you go back, even though it used
         bindActivity.</string>
+
+    <string name="lifecycle_observable">LifecycleObservable</string>
+    <string name="explanation_lifecycle">This activity should always auto-unsubscribe due to
+        LifecycleObservable.bindActivityLifecycle().</string>
 </resources>

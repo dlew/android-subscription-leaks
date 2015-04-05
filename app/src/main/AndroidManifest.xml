@@ -26,6 +26,8 @@
 
         <activity android:name=".BindActivity" />
 
+        <activity android:name=".LifecycleActivity" />
+
     </application>
 
 </manifest>
