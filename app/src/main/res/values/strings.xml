@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RxSubscriptions</string>
+
+    <string name="explanation">Open the following Activities, then come back to here. If you look in a memory
+        tool, you\'ll see that sometimes the amount of memory goes up - the Activity leaked!</string>
+    <string name="explanation_leak">This activity should leak when you go back.</string>
+    <string name="leaking_subscription">Leaking Subscription</string>
 </resources>
