@@ -3,7 +3,12 @@
 
     <string name="explanation">Open the following Activities, then come back to here. If you look in a memory
         tool, you\'ll see that sometimes the amount of memory goes up - the Activity leaked!</string>
+
     <string name="explanation_leak">This activity should leak when you go back.</string>
     <string name="leaking_subscription">Leaking Subscription</string>
     <string name="leaking_subscription_fixed">Leaking Subscription (Fixed)</string>
+
+    <string name="temp_leaking_subscription">Leaking (Temporary)</string>
+    <string name="temp_leaking_subscription_fixed">Leaking (Temporary but fixed)</string>
+    <string name="explanation_leak_temp">This activity should leak when you go back, but eventually release.</string>
 </resources>

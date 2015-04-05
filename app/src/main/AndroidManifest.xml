@@ -22,6 +22,8 @@
 
         <activity android:name=".LeakingActivity" />
 
+        <activity android:name=".TempLeakingActivity" />
+
     </application>
 
 </manifest>
