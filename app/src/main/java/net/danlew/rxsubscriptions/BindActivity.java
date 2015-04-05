@@ -1,9 +1,9 @@
 package net.danlew.rxsubscriptions;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -14,7 +14,7 @@ import timber.log.Timber;
 
 import java.util.concurrent.TimeUnit;
 
-public class BindActivity extends ActionBarActivity {
+public class BindActivity extends Activity {
 
     private static final String FIX_LEAK = "FIX_LEAK";
 

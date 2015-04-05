@@ -1,10 +1,10 @@
 package net.danlew.rxsubscriptions;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import rx.Observable;
 
-public class NeverActivity extends ActionBarActivity {
+public class NeverActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
