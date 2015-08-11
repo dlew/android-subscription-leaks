@@ -23,8 +23,6 @@
 
         <activity android:name=".TempLeakingActivity" />
 
-        <activity android:name=".BindActivity" />
-
         <activity android:name=".LifecycleActivity" />
 
         <activity android:name=".NeverActivity" />

@@ -36,16 +36,6 @@ public class MainActivity extends Activity {
         startActivity(TempLeakingActivity.createIntent(this, true));
     }
 
-    @OnClick(R.id.bind_activity_leak)
-    void bindActivityLeak() {
-        startActivity(BindActivity.createIntent(this, false));
-    }
-
-    @OnClick(R.id.bind_activity_no_leak)
-    void bindActivityNoLeak() {
-        startActivity(BindActivity.createIntent(this, true));
-    }
-
     @OnClick(R.id.lifecycle_observable)
     void lifecycleObservable() {
         startActivity(new Intent(this, LifecycleActivity.class));

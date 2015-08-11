@@ -45,18 +45,6 @@
             android:text="@string/temp_leaking_subscription_fixed" />
 
         <Button
-            android:id="@+id/bind_activity_leak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bind_activity_leak" />
-
-        <Button
-            android:id="@+id/bind_activity_no_leak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bind_activity_no_leak" />
-
-        <Button
             android:id="@+id/lifecycle_observable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

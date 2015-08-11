@@ -1,10 +1,8 @@
 package net.danlew.rxsubscriptions;
 
 import android.os.Bundle;
-import butterknife.ButterKnife;
+import com.trello.rxlifecycle.components.RxActivity;
 import rx.Observable;
-import rx.android.app.RxActivity;
-import rx.android.lifecycle.LifecycleObservable;
 import rx.functions.Action1;
 import timber.log.Timber;
 
@@ -18,11 +16,13 @@ public class LifecycleActivity extends RxActivity {
 
         setContentView(R.layout.activity_lifecycle);
 
-        // LifecycleObservable's binds automatically unsubscribe when the corresponding
+        // RxActivity binds automatically unsubscribe when the corresponding
         // lifecycle event occurs - in this case, onDestroy.
-        LifecycleObservable.bindActivityLifecycle(lifecycle(), Observable.interval(1, TimeUnit.SECONDS))
+        Observable.interval(1, TimeUnit.SECONDS)
+            .compose(this.<Long>bindToLifecycle())
             .subscribe(new Action1<Long>() {
-                @Override public void call(Long aLong) {
+                @Override
+                public void call(Long aLong) {
                     Timber.d("LifecycleActivity received: " + aLong);
                 }
             });
