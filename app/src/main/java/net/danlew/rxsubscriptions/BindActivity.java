@@ -5,8 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import rx.Observable;
 import rx.android.app.AppObservable;
 import rx.functions.Action1;
@@ -18,7 +18,7 @@ public class BindActivity extends Activity {
 
     private static final String FIX_LEAK = "FIX_LEAK";
 
-    @InjectView(R.id.text) TextView mTextView;
+    @Bind(R.id.text) TextView mTextView;
 
     public static Intent createIntent(Context context, boolean fixLeak) {
         Intent intent = new Intent(context, BindActivity.class);
@@ -32,7 +32,7 @@ public class BindActivity extends Activity {
 
         setContentView(R.layout.activity_bind);
 
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         boolean fixLeak = getIntent().getBooleanExtra(FIX_LEAK, false);
         mTextView.setText(fixLeak ? R.string.explanation_bind_no_leak : R.string.explanation_bind_leak);

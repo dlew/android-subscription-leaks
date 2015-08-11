@@ -18,8 +18,6 @@ public class LifecycleActivity extends RxActivity {
 
         setContentView(R.layout.activity_lifecycle);
 
-        ButterKnife.inject(this);
-
         // LifecycleObservable's binds automatically unsubscribe when the corresponding
         // lifecycle event occurs - in this case, onDestroy.
         LifecycleObservable.bindActivityLifecycle(lifecycle(), Observable.interval(1, TimeUnit.SECONDS))
