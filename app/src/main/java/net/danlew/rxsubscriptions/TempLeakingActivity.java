@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import rx.Observable;
 import rx.Subscription;
 import rx.functions.Action1;
@@ -14,6 +17,8 @@ import java.util.concurrent.TimeUnit;
 public class TempLeakingActivity extends Activity {
 
     private static final String FIX_LEAK = "FIX_LEAK";
+
+    @Bind(R.id.explanation) TextView mExplanationView;
 
     private Subscription mSubscription;
 
@@ -28,6 +33,12 @@ public class TempLeakingActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_leaking_temp);
+
+        ButterKnife.bind(this);
+
+        int explanationId = getIntent().getBooleanExtra(FIX_LEAK, false) ?
+            R.string.explanation_leak_temp_fixed : R.string.explanation_leak_temp;
+        mExplanationView.setText(explanationId);
     }
 
     @Override

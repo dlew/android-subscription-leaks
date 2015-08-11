@@ -11,6 +11,8 @@
     <string name="temp_leaking_subscription">Leaking (Temporary)</string>
     <string name="temp_leaking_subscription_fixed">Leaking (Temporary but fixed)</string>
     <string name="explanation_leak_temp">This activity should leak when you go back, but eventually release.</string>
+    <string name="explanation_leak_temp_fixed">This activity should leak when you go back, but we unsubscribe to prevent
+        the leak.</string>
 
     <string name="lifecycle_observable">RxLifecycle</string>
     <string name="explanation_lifecycle">This activity should always auto-unsubscribe due to

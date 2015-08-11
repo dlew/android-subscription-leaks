@@ -10,6 +10,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/explanation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/explanation_leak_temp" />
