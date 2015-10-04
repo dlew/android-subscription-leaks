@@ -33,6 +33,18 @@
             android:text="@string/leaking_subscription_fixed" />
 
         <Button
+            android:id="@+id/leaking_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/leaking_subject" />
+
+        <Button
+            android:id="@+id/leaking_subject_fixed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/leaking_subject_fixed" />
+
+        <Button
             android:id="@+id/temp_leaking_subscription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

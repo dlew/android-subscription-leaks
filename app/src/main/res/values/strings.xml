@@ -8,6 +8,10 @@
     <string name="leaking_subscription">Leaking Subscription</string>
     <string name="leaking_subscription_fixed">Leaking Subscription (Fixed)</string>
 
+    <string name="explanation_leak_subject">This activity should leak when you go back (due to a Subject).</string>
+    <string name="leaking_subject">Leaking due to Subject</string>
+    <string name="leaking_subject_fixed">Leaking due to Subject (Fixed)</string>
+
     <string name="temp_leaking_subscription">Leaking (Temporary)</string>
     <string name="temp_leaking_subscription_fixed">Leaking (Temporary but fixed)</string>
     <string name="explanation_leak_temp">This activity should leak when you go back, but eventually release.</string>

@@ -21,6 +21,8 @@
 
         <activity android:name=".LeakingActivity" />
 
+        <activity android:name=".LeakingSubjectActivity" />
+
         <activity android:name=".TempLeakingActivity" />
 
         <activity android:name=".LifecycleActivity" />

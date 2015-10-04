@@ -26,6 +26,16 @@ public class MainActivity extends Activity {
         startActivity(LeakingActivity.createIntent(this, true));
     }
 
+    @OnClick(R.id.leaking_subject)
+    void leakSubject() {
+        startActivity(LeakingSubjectActivity.createIntent(this, false));
+    }
+
+    @OnClick(R.id.leaking_subject_fixed)
+    void leakSubjectWithFix() {
+        startActivity(LeakingSubjectActivity.createIntent(this, true));
+    }
+
     @OnClick(R.id.temp_leaking_subscription)
     void tempLeakSubscription() {
         startActivity(TempLeakingActivity.createIntent(this, false));
