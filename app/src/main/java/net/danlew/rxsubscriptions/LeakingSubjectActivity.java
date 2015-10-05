@@ -4,18 +4,16 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import rx.Observable;
-import rx.functions.Action1;
-import rx.subjects.PublishSubject;
-import timber.log.Timber;
-
 import java.util.concurrent.TimeUnit;
+import rx.functions.Action1;
+import rx.subjects.BehaviorSubject;
+import timber.log.Timber;
 
 public class LeakingSubjectActivity extends Activity {
 
     private static final String FIX_LEAK = "FIX_LEAK";
 
-    private PublishSubject<Long> mSubject = PublishSubject.create();
+    private BehaviorSubject<Long> mSubject = BehaviorSubject.create(1L);
 
     public static Intent createIntent(Context context, boolean fixLeak) {
         Intent intent = new Intent(context, LeakingSubjectActivity.class);
@@ -29,16 +27,15 @@ public class LeakingSubjectActivity extends Activity {
 
         setContentView(R.layout.activity_leaking_subject);
 
-        // This is similar to LeakingActivity, but it routes all notifications through a Subject
-        Observable.interval(1, TimeUnit.SECONDS).subscribe(mSubject);
-
-        // This should leak because the original Observable never terminates
-        mSubject.subscribe(new Action1<Long>() {
-            @Override
-            public void call(Long aLong) {
-                Timber.d("LeakingSubjectActivity received: " + aLong);
-            }
-        });
+        // This should leak because it's constantly looping on itself
+        mSubject
+            .delay(1, TimeUnit.SECONDS)
+            .subscribe(new Action1<Long>() {
+                @Override public void call(Long aLong) {
+                    Timber.d("LeakingSubjectActivity received: " + aLong);
+                    mSubject.onNext(aLong + 1);
+                }
+            });
     }
 
     @Override
